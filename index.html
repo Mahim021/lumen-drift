@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#07141b">
+    <title>Lumen Drift</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="game-shell">
+        <header class="topbar">
+            <div class="brand-mark" aria-label="Lumen Drift">
+                <span class="brand-orbit"></span>
+                <span class="brand-name">LUMEN <b>DRIFT</b></span>
+            </div>
+            <div class="top-actions">
+                <button class="icon-button" id="soundButton" type="button" aria-label="Toggle sound" title="Toggle sound">Sound on</button>
+                <button class="icon-button" id="pauseButton" type="button" aria-label="Pause game" title="Pause game">Pause</button>
+            </div>
+        </header>
+
+        <section class="game-stage" aria-label="Lumen Drift game">
+            <canvas id="gameCanvas" aria-label="Game canvas"></canvas>
+            <div class="hud">
+                <div class="stat-block">
+                    <span class="stat-label">SCORE</span>
+                    <strong id="scoreValue">000000</strong>
+                </div>
+                <div class="combo-readout" id="comboReadout">x1 COMBO</div>
+                <div class="stat-block stat-right">
+                    <span class="stat-label">BEST</span>
+                    <strong id="bestValue">000000</strong>
+                </div>
+            </div>
+            <div class="status-pill" id="statusPill">SECTOR 01</div>
+            <div class="message-layer" id="messageLayer">
+                <div class="intro-copy">
+                    <p class="eyebrow">A small game of staying luminous</p>
+                    <h1>DRIFT<br><em>INTO LIGHT</em></h1>
+                    <p class="instruction"><span class="keycap">WASD</span> or <span class="keycap">ARROWS</span> to move <span class="dot-separator">&bull;</span> collect sparks <span class="dot-separator">&bull;</span> avoid the void</p>
+                    <button class="primary-button" id="startButton" type="button">Begin the drift <span>&rarr;</span></button>
+                </div>
+            </div>
+            <div class="game-over-layer hidden" id="gameOverLayer">
+                <div class="game-over-card">
+                    <p class="eyebrow">The dark caught up</p>
+                    <h2>DRIFT<br><em>COMPLETE</em></h2>
+                    <div class="final-score"><span>FINAL SCORE</span><strong id="finalScore">000000</strong></div>
+                    <p class="run-note" id="runNote">Every spark leaves a trace.</p>
+                    <button class="primary-button" id="restartButton" type="button">Try another run <span>&rarr;</span></button>
+                </div>
+            </div>
+            <div class="pause-layer hidden" id="pauseLayer">
+                <div class="pause-card">
+                    <p class="eyebrow">The constellation is waiting</p>
+                    <h2>PAUSED</h2>
+                    <button class="primary-button" id="resumeButton" type="button">Resume drift <span>&rarr;</span></button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bottom-bar">
+            <span><i class="live-dot"></i> LIVE SIGNAL</span>
+            <span id="sectorLabel">THE BLUE HOUR / SECTOR 01</span>
+            <span>FIND YOUR ORBIT</span>
+        </footer>
+    </main>
+    <script src="game.js"></script>
+</body>
+
+</html>

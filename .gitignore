@@ -1,0 +1,14 @@
+android_app/.dart_tool/
+android_app/build/
+android_app/.flutter-plugins
+android_app/.flutter-plugins-dependencies
+android_app/.idea/
+android_app/.metadata
+android_app/*.iml
+android_app/android/.gradle/
+android_app/android/local.properties
+android_app/ios/Pods/
+android_app/macos/Pods/
+android_app/linux/flutter/ephemeral/
+android_app/windows/flutter/ephemeral/
+android_app/web/flutter.js
